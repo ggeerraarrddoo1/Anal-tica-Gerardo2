@@ -1,0 +1,5 @@
+{
+  "name": "Visor de Evolución Analítica Gerardo",
+  "description": "Una aplicación web interactiva para visualizar la evolución de parámetros de análisis de sangre a lo largo del tiempo, con descripciones generadas por IA.",
+  "requestFramePermissions": []
+}
