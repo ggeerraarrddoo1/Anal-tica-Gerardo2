@@ -1,4 +1,3 @@
-
 import { BloodTestData } from './types';
 
 export const BLOOD_TEST_DATA: BloodTestData = {
@@ -17,7 +16,8 @@ export const BLOOD_TEST_DATA: BloodTestData = {
         { date: "2025-05-16", value: 12.5, unit: "g/dL", refRange: "[13.0-17.0]" },
         { date: "2025-05-21", value: 12.7, unit: "g/dL", refRange: "[13.5-18]" },
         { date: "2025-05-22", value: 13.0, unit: "g/dL", refRange: "[13.0-17.0]" },
-        { date: "2025-06-05", value: 12.4, unit: "g/dL", refRange: "13.00-17.00" }
+        { date: "2025-06-05", value: 12.4, unit: "g/dL", refRange: "13.00-17.00" },
+        { date: "2025-07-02", value: 13.4, unit: "g/dL", refRange: "[13.0-17.5]" }
     ],
     "Hematocrito": [
         { date: "2025-02-12", value: 43.3, unit: "%", refRange: "[42-52]" },
@@ -34,7 +34,8 @@ export const BLOOD_TEST_DATA: BloodTestData = {
         { date: "2025-05-16", value: 40.9, unit: "%", refRange: "[40.0-50.0]" },
         { date: "2025-05-21", value: 37.9, unit: "%", refRange: "[42-52]" },
         { date: "2025-05-22", value: 41.2, unit: "%", refRange: "[40.0-50.0]" },
-        { date: "2025-06-05", value: 39.2, unit: "%", refRange: "40.00-50.00" }
+        { date: "2025-06-05", value: 39.2, unit: "%", refRange: "40.00-50.00" },
+        { date: "2025-07-02", value: 39, unit: "%", refRange: null }
     ],
     "VCM": [
         { date: "2025-02-12", value: 92.8, unit: "fL", refRange: "[78-100]" },
@@ -49,7 +50,8 @@ export const BLOOD_TEST_DATA: BloodTestData = {
         { date: "2025-05-16", value: 97.7, unit: "fL", refRange: "[82.0-94.0]" },
         { date: "2025-05-21", value: 93, unit: "fL", refRange: "[78-100]" },
         { date: "2025-05-22", value: 96.3, unit: "fL", refRange: "[82.0-94.0]" },
-        { date: "2025-06-05", value: 94.4, unit: "fL", refRange: "82.00-94.00" }
+        { date: "2025-06-05", value: 94.4, unit: "fL", refRange: "82.00-94.00" },
+        { date: "2025-07-02", value: 89.8, unit: "fL", refRange: "[80.0-100.0]" }
     ],
     "HCM": [
         { date: "2025-02-12", value: 32.8, unit: "pg", refRange: "[27-31]" },
@@ -64,7 +66,8 @@ export const BLOOD_TEST_DATA: BloodTestData = {
         { date: "2025-05-16", value: 29.8, unit: "pg", refRange: "[25.0-33.0]" },
         { date: "2025-05-21", value: 31.3, unit: "pg", refRange: "[27-31]" },
         { date: "2025-05-22", value: 30.3, unit: "pg", refRange: "[25.0-33.0]" },
-        { date: "2025-06-05", value: 29.9, unit: "pg", refRange: "25.00-33.00" }
+        { date: "2025-06-05", value: 29.9, unit: "pg", refRange: "25.00-33.00" },
+        { date: "2025-07-02", value: 30.5, unit: "pg", refRange: "[26.6-33.8]" }
     ],
     "CHCM": [
         { date: "2025-02-12", value: 35.4, unit: "g/dL", refRange: "[32-36]" },
@@ -79,9 +82,10 @@ export const BLOOD_TEST_DATA: BloodTestData = {
         { date: "2025-05-16", value: 30.5, unit: "g/dL", refRange: "[33.0-37.0]" },
         { date: "2025-05-21", value: 33.6, unit: "g/dL", refRange: "[32-36]" },
         { date: "2025-05-22", value: 31.5, unit: "g/dL", refRange: "[33.0-37.0]" },
-        { date: "2025-06-05", value: 31.6, unit: "g/dL", refRange: "33.00-37.00" }
+        { date: "2025-06-05", value: 31.6, unit: "g/dL", refRange: "33.00-37.00" },
+        { date: "2025-07-02", value: 34.0, unit: "g/dL", refRange: "[31.5-36.3]" }
     ],
-    "ADE/RDW": [ 
+    "ADE/RDW": [
         { date: "2025-02-12", value: 13.5, unit: "%", refRange: "[11.5-14]" },
         { date: "2025-03-05", value: 13.2, unit: "%", refRange: "[11.5-14]" },
         { date: "2025-03-15", value: 13.2, unit: "%", refRange: "[11.5-14]" },
@@ -94,7 +98,8 @@ export const BLOOD_TEST_DATA: BloodTestData = {
         { date: "2025-05-16", value: 16.1, unit: "%", refRange: "[12.0-16.0]" },
         { date: "2025-05-21", value: 17.5, unit: "%", refRange: "[11.5-14]" },
         { date: "2025-05-22", value: 16.8, unit: "%", refRange: "[12.0-16.0]" },
-        { date: "2025-06-05", value: 16.3, unit: "%", refRange: "12.00-16.00" }
+        { date: "2025-06-05", value: 16.3, unit: "%", refRange: "12.00-16.00" },
+        { date: "2025-07-02", value: 17.9, unit: "%", refRange: "[12.00-15.00]" }
     ],
     "Leucocitos": [
         { date: "2025-02-12", value: 5.4, unit: "10^9/L", refRange: "[4-10.5]" },
@@ -109,7 +114,8 @@ export const BLOOD_TEST_DATA: BloodTestData = {
         { date: "2025-05-16", value: 19.21, unit: "10^9/L", refRange: "[4.0-11.0]" },
         { date: "2025-05-21", value: 11.1, unit: "10^9/L", refRange: "[4-10.5]" },
         { date: "2025-05-22", value: 12.09, unit: "10^9/L", refRange: "[4.0-11.0]" },
-        { date: "2025-06-05", value: 8.04, unit: "10^9/L", refRange: "4.00-11.00" }
+        { date: "2025-06-05", value: 8.04, unit: "10^9/L", refRange: "4.00-11.00" },
+        { date: "2025-07-02", value: 11.5, unit: "10^9/L", refRange: "[3.80-11.00]" }
     ],
     "Neutrofilos (%)": [
         { date: "2025-02-12", value: 64.5, unit: "%", refRange: "[40-75]" },
@@ -124,7 +130,8 @@ export const BLOOD_TEST_DATA: BloodTestData = {
         { date: "2025-05-16", value: 66.3, unit: "%", refRange: "[37.0-72.0]" },
         { date: "2025-05-21", value: 58.5, unit: "%", refRange: "[40-75]" },
         { date: "2025-05-22", value: 56.3, unit: "%", refRange: "[37.0-72.0]" },
-        { date: "2025-06-05", value: 69.9, unit: "%", refRange: "37.00-72.00" }
+        { date: "2025-06-05", value: 69.9, unit: "%", refRange: "37.00-72.00" },
+        { date: "2025-07-02", value: 51.3, unit: "%", refRange: "[40.0-77.0]" }
     ],
     "Linfocitos (%)": [
         { date: "2025-02-12", value: 23.7, unit: "%", refRange: "[20-45]" },
@@ -139,7 +146,8 @@ export const BLOOD_TEST_DATA: BloodTestData = {
         { date: "2025-05-16", value: 22.8, unit: "%", refRange: "[20.0-52.0]" },
         { date: "2025-05-21", value: 25, unit: "%", refRange: "[20-45]" },
         { date: "2025-05-22", value: 29.3, unit: "%", refRange: "[20.0-52.0]" },
-        { date: "2025-06-05", value: 15.0, unit: "%", refRange: "20.00-52.00" }
+        { date: "2025-06-05", value: 15.0, unit: "%", refRange: "20.00-52.00" },
+        { date: "2025-07-02", value: 32.5, unit: "%", refRange: "[16.0-44.0]" }
     ],
      "Monocitos (%)": [
         { date: "2025-02-12", value: 7.1, unit: "%", refRange: "[2-10]" },
@@ -154,7 +162,8 @@ export const BLOOD_TEST_DATA: BloodTestData = {
         { date: "2025-05-16", value: 7.9, unit: "%", refRange: "[3.0-13.0]" },
         { date: "2025-05-21", value: 10.7, unit: "%", refRange: "[2-10]" },
         { date: "2025-05-22", value: 6.7, unit: "%", refRange: "[3.0-13.0]" },
-        { date: "2025-06-05", value: 9.4, unit: "%", refRange: "3.00-13.00" }
+        { date: "2025-06-05", value: 9.4, unit: "%", refRange: "3.00-13.00" },
+        { date: "2025-07-02", value: 9.3, unit: "%", refRange: "[4.0-10.0]" }
     ],
     "Eosinofilos (%)": [
         { date: "2025-02-12", value: 3.4, unit: "%", refRange: "[1-6]" },
@@ -169,7 +178,8 @@ export const BLOOD_TEST_DATA: BloodTestData = {
         { date: "2025-05-16", value: 0.7, unit: "%", refRange: "[1.0-6.0]" },
         { date: "2025-05-21", value: 4, unit: "%", refRange: "[1-6]" },
         { date: "2025-05-22", value: 4.1, unit: "%", refRange: "[1.0-6.0]" },
-        { date: "2025-06-05", value: 3.1, unit: "%", refRange: "1.00-6.00" }
+        { date: "2025-06-05", value: 3.1, unit: "%", refRange: "1.00-6.00" },
+        { date: "2025-07-02", value: 4.0, unit: "%", refRange: "[1.0-7.0]" }
     ],
     "Basofilos (%)": [
         { date: "2025-02-12", value: 1.3, unit: "%", refRange: "[0-2]" },
@@ -184,7 +194,8 @@ export const BLOOD_TEST_DATA: BloodTestData = {
         { date: "2025-05-16", value: 0.9, unit: "%", refRange: "[0.0-2.0]" },
         { date: "2025-05-21", value: 1.8, unit: "%", refRange: "[0-2]" },
         { date: "2025-05-22", value: 1.1, unit: "%", refRange: "[0.0-2.0]" },
-        { date: "2025-06-05", value: 0.5, unit: "%", refRange: "0.00-2.00" }
+        { date: "2025-06-05", value: 0.5, unit: "%", refRange: "0.00-2.00" },
+        { date: "2025-07-02", value: 1.9, unit: "%", refRange: "[0.0-1.0]" }
     ],
     "Neutrofilos (Absoluto)": [
         { date: "2025-02-12", value: 3.5, unit: "10^9/L", refRange: "[1.5-6.6]" },
@@ -199,7 +210,8 @@ export const BLOOD_TEST_DATA: BloodTestData = {
         { date: "2025-05-16", value: 12.73, unit: "10^9/L", refRange: "[1.5-7.2]" },
         { date: "2025-05-21", value: 6.5, unit: "10^9/L", refRange: "[1.5-6.6]" },
         { date: "2025-05-22", value: 6.81, unit: "10^9/L", refRange: "[1.5-7.2]" },
-        { date: "2025-06-05", value: 5.62, unit: "10^9/L", refRange: "1.50-7.20" }
+        { date: "2025-06-05", value: 5.62, unit: "10^9/L", refRange: "1.50-7.20" },
+        { date: "2025-07-02", value: 5.9, unit: "10^9/L", refRange: "[1.80-11.00]" }
     ],
     "Linfocitos (Absoluto)": [
         { date: "2025-02-12", value: 1.3, unit: "10^9/L", refRange: "[1.5-3.5]" },
@@ -214,7 +226,8 @@ export const BLOOD_TEST_DATA: BloodTestData = {
         { date: "2025-05-16", value: 4.37, unit: "10^9/L", refRange: "[1.5-4.5]" },
         { date: "2025-05-21", value: 2.8, unit: "10^9/L", refRange: "[1.5-3.5]" },
         { date: "2025-05-22", value: 3.54, unit: "10^9/L", refRange: "[1.5-4.5]" },
-        { date: "2025-06-05", value: 1.20, unit: "10^9/L", refRange: "1.50-4.50" }
+        { date: "2025-06-05", value: 1.20, unit: "10^9/L", refRange: "1.50-4.50" },
+        { date: "2025-07-02", value: 3.74, unit: "10^9/L", refRange: "[1.00-4.80]" }
     ],
     "Monocitos (Absoluto)": [
         { date: "2025-02-12", value: 0.4, unit: "10^9/L", refRange: "[0.2-1]" },
@@ -229,7 +242,14 @@ export const BLOOD_TEST_DATA: BloodTestData = {
         { date: "2025-05-16", value: 1.51, unit: "10^9/L", refRange: "[0.4-1.1]" },
         { date: "2025-05-21", value: 1.2, unit: "10^9/L", refRange: "[0.2-1]" },
         { date: "2025-05-22", value: 0.81, unit: "10^9/L", refRange: "[0.4-1.1]" },
-        { date: "2025-06-05", value: 0.76, unit: "10^9/L", refRange: "0.40-1.10" }
+        { date: "2025-06-05", value: 0.76, unit: "10^9/L", refRange: "0.40-1.10" },
+        { date: "2025-07-02", value: 1.06, unit: "10^9/L", refRange: "[0.00-1.00]" }
+    ],
+    "Eosinofilos (Absoluto)": [
+        { date: "2025-07-02", value: 0.45, unit: "10^9/L", refRange: "[0.00-0.45]" }
+    ],
+    "Basofilos (Absoluto)": [
+        { date: "2025-07-02", value: 0.21, unit: "10^9/L", refRange: "[0.00-0.20]" }
     ],
     "Plaquetas": [
         { date: "2025-02-12", value: 326, unit: "10^9/L", refRange: "[150-350]" },
@@ -244,7 +264,8 @@ export const BLOOD_TEST_DATA: BloodTestData = {
         { date: "2025-05-16", value: 651, unit: "10^9/L", refRange: "[130-450]" },
         { date: "2025-05-21", value: 497, unit: "10^9/L", refRange: "[150-350]" },
         { date: "2025-05-22", value: 482, unit: "10^9/L", refRange: "[130-450]" },
-        { date: "2025-06-05", value: 359, unit: "10^9/L", refRange: "130.00-450.00" }
+        { date: "2025-06-05", value: 359, unit: "10^9/L", refRange: "130.00-450.00" },
+        { date: "2025-07-02", value: 321.0, unit: "10^9/L", refRange: "[130.0-450.0]" }
     ],
     "Glucosa": [
         { date: "2025-02-12", value: 103, unit: "mg/dL", refRange: "[74-100]" },
@@ -259,7 +280,8 @@ export const BLOOD_TEST_DATA: BloodTestData = {
         { date: "2025-05-16", value: 77, unit: "mg/dL", refRange: "[74-106]" },
         { date: "2025-05-21", value: 83, unit: "mg/dL", refRange: "[74-100]" },
         { date: "2025-05-22", value: 95, unit: "mg/dL", refRange: "[74-106]" },
-        { date: "2025-06-05", value: 112, unit: "mg/dL", refRange: "74-106" }
+        { date: "2025-06-05", value: 112, unit: "mg/dL", refRange: "74-106" },
+        { date: "2025-07-02", value: 73, unit: "mg/dL", refRange: "[70-110]" }
     ],
     "Urea": [
         { date: "2025-02-12", value: 35, unit: "mg/dL", refRange: "[17-43]" },
@@ -274,7 +296,8 @@ export const BLOOD_TEST_DATA: BloodTestData = {
         { date: "2025-05-16", value: 79, unit: "mg/dL", refRange: "[19-43]" },
         { date: "2025-05-21", value: 77, unit: "mg/dL", refRange: "[17-43]" },
         { date: "2025-05-22", value: 64, unit: "mg/dL", refRange: "[19-43]" },
-        { date: "2025-06-05", value: 36, unit: "mg/dL", refRange: "19-43" }
+        { date: "2025-06-05", value: 36, unit: "mg/dL", refRange: "19-43" },
+        { date: "2025-07-02", value: 44, unit: "mg/dL", refRange: "[10-45]" }
     ],
     "Creatinina": [
         { date: "2025-02-12", value: 1.03, unit: "mg/dL", refRange: "[0.67-1.17]" },
@@ -289,7 +312,8 @@ export const BLOOD_TEST_DATA: BloodTestData = {
         { date: "2025-05-16", value: 1.30, unit: "mg/dL", refRange: "[0.66-1.25]" },
         { date: "2025-05-21", value: 1.11, unit: "mg/dL", refRange: "[0.67-1.17]" },
         { date: "2025-05-22", value: 1.33, unit: "mg/dL", refRange: "[0.66-1.25]" },
-        { date: "2025-06-05", value: 1.18, unit: "mg/dL", refRange: "0.66-1.25" }
+        { date: "2025-06-05", value: 1.18, unit: "mg/dL", refRange: "0.66-1.25" },
+        { date: "2025-07-02", value: 1.15, unit: "mg/dL", refRange: "[0.70-1.30]" }
     ],
     "Sodio": [
         { date: "2025-02-12", value: 141, unit: "mEq/L", refRange: "[136-146]" },
@@ -306,7 +330,8 @@ export const BLOOD_TEST_DATA: BloodTestData = {
         { date: "2025-05-16", value: 139, unit: "mmol/L", refRange: "[137-145]" },
         { date: "2025-05-21", value: 140, unit: "mEq/L", refRange: "[136-146]" },
         { date: "2025-05-22", value: 138, unit: "mmol/L", refRange: "[137-145]" },
-        { date: "2025-06-05", value: 137, unit: "mmol/L", refRange: "137-145" }
+        { date: "2025-06-05", value: 137, unit: "mmol/L", refRange: "137-145" },
+        { date: "2025-07-02", value: 144, unit: "mmol/L", refRange: "[132-146]" }
     ],
     "Potasio": [
         { date: "2025-02-12", value: 4.7, unit: "mEq/L", refRange: "[3.5-5.1]" },
@@ -323,7 +348,8 @@ export const BLOOD_TEST_DATA: BloodTestData = {
         { date: "2025-05-16", value: 4.5, unit: "mmol/L", refRange: "[3.5-5.1]" },
         { date: "2025-05-21", value: 4.4, unit: "mEq/L", refRange: "[3.5-5.1]" },
         { date: "2025-05-22", value: 3.8, unit: "mmol/L", refRange: "[3.5-5.1]" },
-        { date: "2025-06-05", value: 4.8, unit: "mmol/L", refRange: "3.50-5.10" }
+        { date: "2025-06-05", value: 4.8, unit: "mmol/L", refRange: "3.50-5.10" },
+        { date: "2025-07-02", value: 4.3, unit: "mmol/L", refRange: "[3.5-5.5]" }
     ],
     "Cloro": [
         { date: "2025-03-05", value: 106, unit: "mEq/L", refRange: "[98-107]" },
@@ -339,7 +365,8 @@ export const BLOOD_TEST_DATA: BloodTestData = {
         { date: "2025-05-16", value: 104, unit: "mmol/L", refRange: "[98-107]" },
         { date: "2025-05-21", value: 101, unit: "mEq/L", refRange: "[98-107]" },
         { date: "2025-05-22", value: 103, unit: "mmol/L", refRange: "[98-107]" },
-        { date: "2025-06-05", value: 105, unit: "mmol/L", refRange: "98-107" }
+        { date: "2025-06-05", value: 105, unit: "mmol/L", refRange: "98-107" },
+        { date: "2025-07-02", value: 105, unit: "mmol/L", refRange: "[95-110]" }
     ],
     "Calcio": [
         { date: "2025-03-05", value: 9.4, unit: "mg/dL", refRange: "[8.8-10.6]" },
@@ -354,7 +381,8 @@ export const BLOOD_TEST_DATA: BloodTestData = {
         { date: "2025-05-16", value: 9.2, unit: "mg/dL", refRange: "[8.4-10.2]" },
         { date: "2025-05-21", value: 9.4, unit: "mg/dL", refRange: "[8.8-10.6]" },
         { date: "2025-05-22", value: 9.2, unit: "mg/dL", refRange: "[8.4-10.2]" },
-        { date: "2025-06-05", value: 8.4, unit: "mg/dL", refRange: "8.40-10.20" }
+        { date: "2025-06-05", value: 8.4, unit: "mg/dL", refRange: "8.40-10.20" },
+        { date: "2025-07-02", value: 9.1, unit: "mg/dL", refRange: "[8.8-10.5]" }
     ],
      "Fosforo": [
         { date: "2025-03-05", value: 3.4, unit: "mg/dL", refRange: "[2.5-4.5]" },
@@ -363,7 +391,8 @@ export const BLOOD_TEST_DATA: BloodTestData = {
         { date: "2025-05-16", value: 4.6, unit: "mg/dL", refRange: "[2.5-4.5]" },
         { date: "2025-05-21", value: 5.1, unit: "mg/dL", refRange: "[2.5-4.5]" },
         { date: "2025-05-22", value: 4.1, unit: "mg/dL", refRange: "[2.5-4.5]" },
-        { date: "2025-06-05", value: 3.2, unit: "mg/dL", refRange: "2.5-4.5" }
+        { date: "2025-06-05", value: 3.2, unit: "mg/dL", refRange: "2.5-4.5" },
+        { date: "2025-07-02", value: 6.1, unit: "mg/dL", refRange: "[2.4-5.1]" }
     ],
     "Magnesio": [
         { date: "2025-02-12", value: 2.0, unit: "mg/dL", refRange: "[1.8-2.6]" },
@@ -372,7 +401,8 @@ export const BLOOD_TEST_DATA: BloodTestData = {
         { date: "2025-05-16", value: 2.4, unit: "mg/dL", refRange: "[1.6-2.3]" },
         { date: "2025-05-21", value: 2.3, unit: "mg/dL", refRange: "[1.8-2.6]" },
         { date: "2025-05-22", value: 2.2, unit: "mg/dL", refRange: "[1.6-2.3]" },
-        { date: "2025-06-05", value: 1.9, unit: "mg/dL", refRange: "1.60-2.30" }
+        { date: "2025-06-05", value: 1.9, unit: "mg/dL", refRange: "1.60-2.30" },
+        { date: "2025-07-02", value: 2.0, unit: "mg/dL", refRange: "[1.8-2.4]" }
     ],
     "Bilirrubina Total": [
         { date: "2025-02-12", value: 0.52, unit: "mg/dL", refRange: "[0.3-1.2]" },
@@ -386,7 +416,8 @@ export const BLOOD_TEST_DATA: BloodTestData = {
         { date: "2025-05-16", value: 1.0, unit: "mg/dL", refRange: "[0.2-1.3]" },
         { date: "2025-05-21", value: 0.96, unit: "mg/dL", refRange: "[0.3-1.2]" },
         { date: "2025-05-22", value: 1.0, unit: "mg/dL", refRange: "[0.2-1.3]" },
-        { date: "2025-06-05", value: 0.8, unit: "mg/dL", refRange: "0.20-1.30" }
+        { date: "2025-06-05", value: 0.8, unit: "mg/dL", refRange: "0.20-1.30" },
+        { date: "2025-07-02", value: 0.3, unit: "mg/dL", refRange: "[0.0-1.1]" }
     ],
     "GOT/AST": [
         { date: "2025-02-12", value: 27, unit: "U/L", refRange: "[3-50]" },
@@ -399,7 +430,8 @@ export const BLOOD_TEST_DATA: BloodTestData = {
         { date: "2025-05-16", value: 60, unit: "U/L", refRange: "[17-59]" },
         { date: "2025-05-21", value: 40, unit: "U/L", refRange: "[3-50]" },
         { date: "2025-05-22", value: 61, unit: "U/L", refRange: "[17-59]" },
-        { date: "2025-06-05", value: 28, unit: "U/L", refRange: "17-59" }
+        { date: "2025-06-05", value: 28, unit: "U/L", refRange: "17-59" },
+        { date: "2025-07-02", value: 24, unit: "U/L", refRange: "[0-37]" }
     ],
     "GPT/ALT": [
         { date: "2025-02-12", value: 51, unit: "U/L", refRange: "[3-50]" },
@@ -413,7 +445,8 @@ export const BLOOD_TEST_DATA: BloodTestData = {
         { date: "2025-05-16", value: 110, unit: "U/L", refRange: "[10-45]" },
         { date: "2025-05-21", value: 70, unit: "U/L", refRange: "[3-50]" },
         { date: "2025-05-22", value: 85, unit: "U/L", refRange: "[10-45]" },
-        { date: "2025-06-05", value: 31, unit: "U/L", refRange: "10-45" }
+        { date: "2025-06-05", value: 31, unit: "U/L", refRange: "10-45" },
+        { date: "2025-07-02", value: 50, unit: "U/L", refRange: "[0-49]" }
     ],
     "GGT": [
         { date: "2025-02-12", value: 48, unit: "U/L", refRange: "[8-55]" },
@@ -426,7 +459,8 @@ export const BLOOD_TEST_DATA: BloodTestData = {
         { date: "2025-05-16", value: 368, unit: "U/L", refRange: "[15-73]" },
         { date: "2025-05-21", value: 346, unit: "U/L", refRange: "[8-55]" },
         { date: "2025-05-22", value: 314, unit: "U/L", refRange: "[15-73]" },
-        { date: "2025-06-05", value: 163, unit: "U/L", refRange: "15-73" }
+        { date: "2025-06-05", value: 163, unit: "U/L", refRange: "15-73" },
+        { date: "2025-07-02", value: 159, unit: "U/L", refRange: "[5-85]" }
     ],
     "Fosfatasa Alcalina": [
         { date: "2025-02-12", value: 81, unit: "U/L", refRange: "[30-120]" },
@@ -439,7 +473,8 @@ export const BLOOD_TEST_DATA: BloodTestData = {
         { date: "2025-05-16", value: 205, unit: "U/L", refRange: "[38-126]" },
         { date: "2025-05-21", value: 199, unit: "U/L", refRange: "[30-120]" },
         { date: "2025-05-22", value: 180, unit: "U/L", refRange: "[38-126]" },
-        { date: "2025-06-05", value: 130, unit: "U/L", refRange: "38-126" }
+        { date: "2025-06-05", value: 130, unit: "U/L", refRange: "38-126" },
+        { date: "2025-07-02", value: 84, unit: "U/L", refRange: "[40-136]" }
     ],
     "LDH": [
         { date: "2025-02-12", value: 488, unit: "U/L", refRange: "[208-378]" },
@@ -452,7 +487,8 @@ export const BLOOD_TEST_DATA: BloodTestData = {
         { date: "2025-05-16", value: 555, unit: "U/L", refRange: "[120-246]" },
         { date: "2025-05-21", value: 801, unit: "U/L", refRange: "[208-378]" },
         { date: "2025-05-22", value: 466, unit: "U/L", refRange: "[120-246]" },
-        { date: "2025-06-05", value: 227, unit: "U/L", refRange: "120-246" }
+        { date: "2025-06-05", value: 227, unit: "U/L", refRange: "120-246" },
+        { date: "2025-07-02", value: 234, unit: "U/L", refRange: "[120-241]" }
     ],
     "Proteinas Totales": [
         { date: "2025-02-12", value: 7.2, unit: "g/dL", refRange: "[6.6-8.3]" },
@@ -465,7 +501,8 @@ export const BLOOD_TEST_DATA: BloodTestData = {
         { date: "2025-05-16", value: 7.5, unit: "g/dL", refRange: "[6.3-8.2]" },
         { date: "2025-05-21", value: 6.7, unit: "g/dL", refRange: "[6.6-8.3]" },
         { date: "2025-05-22", value: 7.7, unit: "g/dL", refRange: "[6.3-8.2]" },
-        { date: "2025-06-05", value: 7.4, unit: "g/dL", refRange: "6.30-8.20" }
+        { date: "2025-06-05", value: 7.4, unit: "g/dL", refRange: "6.30-8.20" },
+        { date: "2025-07-02", value: 7.0, unit: "g/dL", refRange: "[6.4-8.2]" }
     ],
     "Albumina": [
         { date: "2025-02-12", value: 4.6, unit: "g/dL", refRange: "[3.2-5.2]" },
@@ -479,7 +516,8 @@ export const BLOOD_TEST_DATA: BloodTestData = {
         { date: "2025-05-16", value: 4.0, unit: "g/dL", refRange: "[3.5-5.0]" },
         { date: "2025-05-21", value: 3.9, unit: "g/dL", refRange: "[3.2-5.2]" },
         { date: "2025-05-22", value: 4.1, unit: "g/dL", refRange: "[3.5-5.0]" },
-        { date: "2025-06-05", value: 3.7, unit: "g/dL", refRange: "3.5-5.0" }
+        { date: "2025-06-05", value: 3.7, unit: "g/dL", refRange: "3.5-5.0" },
+        { date: "2025-07-02", value: 4.2, unit: "g/dL", refRange: "[3.4-5.0]" }
     ],
     "Acido Urico": [
         { date: "2025-02-12", value: 6.2, unit: "mg/dL", refRange: "[3.5-7.2]" },
@@ -492,14 +530,16 @@ export const BLOOD_TEST_DATA: BloodTestData = {
         { date: "2025-05-16", value: 7.9, unit: "mg/dL", refRange: "[2.5-8.5]" },
         { date: "2025-05-21", value: 7.1, unit: "mg/dL", refRange: "[3.5-7.2]" },
         { date: "2025-05-22", value: 7.7, unit: "mg/dL", refRange: "[2.5-8.5]" },
-        { date: "2025-06-05", value: 3.9, unit: "mg/dL", refRange: "2.5-8.5" }
+        { date: "2025-06-05", value: 3.9, unit: "mg/dL", refRange: "2.5-8.5" },
+        { date: "2025-07-02", value: 5.7, unit: "mg/dL", refRange: "[2.6-7.2]" }
     ],
     "Hierro": [
          { date: "2025-02-12", value: 63, unit: "µg/dL", refRange: "[70-180]" },
          { date: "2025-05-12", value: 99, unit: "µg/dL", refRange: "37-170" },
          { date: "2025-05-16", value: 91, unit: "µg/dL", refRange: "37-170" },
          { date: "2025-05-22", value: 103, unit: "µg/dL", refRange: "37-170" },
-         { date: "2025-06-05", value: 27, unit: "µg/dL", refRange: "37-170" }
+         { date: "2025-06-05", value: 27, unit: "µg/dL", refRange: "37-170" },
+         { date: "2025-07-02", value: 89, unit: "µg/dL", refRange: "[35-150]" }
     ],
     "Proteina C Reactiva": [ 
         { date: "2025-03-15", value: 42.6, unit: "mg/L", refRange: "[0-5]" }, 
@@ -582,6 +622,15 @@ export const BLOOD_TEST_DATA: BloodTestData = {
         { date: "2025-03-14", value: 20.6, unit: "mmol/L", refRange: "[24-28]", note: "HCO3a Tarde" },
         { date: "2025-04-29", value: 23.5, unit: "mmol/L", refRange: "[24-28]", note: "HCO3a Madrugada (Venosa)" }
     ],
+    "Colesterol": [
+        { date: "2025-07-02", value: 261, unit: "mg/dL", refRange: "[140-200]" }
+    ],
+    "Trigliceridos": [
+        { date: "2025-07-02", value: 189, unit: "mg/dL", refRange: "[50-160]" }
+    ],
+    "Creatinkinasa (CK)": [
+        { date: "2025-07-02", value: 49, unit: "U/L", refRange: "[39-308]" }
+    ]
 };
 
 export const GENERAL_REF_RANGES: Record<string, string> = {
@@ -600,6 +649,8 @@ export const GENERAL_REF_RANGES: Record<string, string> = {
     "Neutrofilos (Absoluto)": "Ref: ~1.5-7.5 x 10^9/L",
     "Linfocitos (Absoluto)": "Ref: ~1.0-4.0 x 10^9/L",
     "Monocitos (Absoluto)": "Ref: ~0.2-1.0 x 10^9/L",
+    "Eosinofilos (Absoluto)": "Ref: ~0.0-0.5 x 10^9/L",
+    "Basofilos (Absoluto)": "Ref: ~0.0-0.2 x 10^9/L",
     "Plaquetas": "Ref: ~150-450 x 10^9/L",
     "Glucosa": "Ref: ~70-100 mg/dL (Ayunas)",
     "Urea": "Ref: ~15-45 mg/dL",
@@ -637,6 +688,9 @@ export const GENERAL_REF_RANGES: Record<string, string> = {
     "pO2 (Gasometria Arterial)": "Ref: 80-100 mmHg",
     "pO2 (Gasometria Venosa)": "Ref: ~30-50 mmHg",
     "HCO3 (Bicarbonato Gasometria)": "Ref: ~22-28 mmol/L",
+    "Colesterol": "Ref: Deseable <200 mg/dL",
+    "Trigliceridos": "Ref: Deseable <150 mg/dL",
+    "Creatinkinasa (CK)": "Ref: ~40-320 U/L (Varía)"
 };
 
 export const PREDEFINED_DESCRIPTIONS: Record<string, string> = {
@@ -655,6 +709,8 @@ export const PREDEFINED_DESCRIPTIONS: Record<string, string> = {
     "Neutrofilos (Absoluto)": "Recuento absoluto de neutrófilos, más preciso que el porcentaje para evaluar riesgo de infección (neutropenia).",
     "Linfocitos (Absoluto)": "Recuento absoluto de linfocitos. Útil para evaluar estado inmunitario.",
     "Monocitos (Absoluto)": "Recuento absoluto de monocitos.",
+    "Eosinofilos (Absoluto)": "Recuento absoluto de eosinófilos. Aumenta en alergias y parasitosis.",
+    "Basofilos (Absoluto)": "Recuento absoluto de basófilos.",
     "Plaquetas": "Fragmentos celulares para la coagulación. Bajas (trombocitopenia) causan sangrado; altas (trombocitosis) riesgo de coágulos.",
     "Glucosa": "Azúcar principal en sangre, fuente de energía. Clave para diabetes. Alta (hiperglucemia) o baja (hipoglucemia) tienen implicaciones serias.",
     "Urea": "Producto de desecho del metabolismo proteico, eliminado por riñones. Indicador de función renal e hidratación.",
@@ -690,6 +746,9 @@ export const PREDEFINED_DESCRIPTIONS: Record<string, string> = {
     "pCO2 (Gasometria Arterial)": "Presión parcial de dióxido de carbono en sangre arterial. Refleja componente respiratorio del equilibrio ácido-base.",
     "pCO2 (Gasometria Venosa)": "Presión parcial de dióxido de carbono en sangre venosa. Refleja componente respiratorio.",
     "pO2 (Gasometria Arterial)": "Presión parcial de oxígeno en sangre arterial. Mide la oxigenación sanguínea.",
-    "pO2 (Gasometria Venosa)": "Presión parcial de oxígeno en sangre venosa. Refleja la extracción de oxígeno por los tejidos.",
-    "HCO3 (Bicarbonato Gasometria)": "Bicarbonato en sangre, principal buffer. Refleja componente metabólico del equilibrio ácido-base."
+    "pO2 (Gasometria Venosa)": "Refleja la extracción de oxígeno por los tejidos.",
+    "HCO3 (Bicarbonato Gasometria)": "Bicarbonato en sangre, principal buffer. Refleja componente metabólico del equilibrio ácido-base.",
+    "Colesterol": "El colesterol es una sustancia grasa necesaria para las células, pero su exceso en sangre (hipercolesterolemia) es un factor de riesgo cardiovascular importante, ya que puede depositarse en las arterias.",
+    "Trigliceridos": "Son otro tipo de grasa en la sangre. Niveles elevados, a menudo junto con colesterol alto, aumentan el riesgo de enfermedades del corazón y pueden estar relacionados con la dieta, el sobrepeso o la diabetes.",
+    "Creatinkinasa (CK)": "La CK es una enzima que se encuentra en el corazón, el cerebro y, sobre todo, en los músculos. Niveles elevados en sangre suelen indicar daño o estrés muscular, como el que puede ocurrir por ejercicio intenso, lesiones o ciertas enfermedades musculares."
 };
