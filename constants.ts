@@ -4,8 +4,6 @@ export const BLOOD_TEST_DATA: BloodTestData = {
     "Hemoglobina": [
         { date: "2025-02-12", value: 15.3, unit: "g/dL", refRange: "[13.5-18]" },
         { date: "2025-03-05", value: 14.4, unit: "g/dL", refRange: "[13.5-18]" },
-        { date: "2025-03-14", value: 13.7, unit: "g/dL", refRange: "[13.5-17.5]", note: "Gasometría Mañana" },
-        { date: "2025-03-14", value: 13.5, unit: "g/dL", refRange: "[13.5-17.5]", note: "Gasometría Tarde" },
         { date: "2025-03-15", value: 13.2, unit: "g/dL", refRange: "[13.5-18]" },
         { date: "2025-03-17", value: 13.9, unit: "g/dL", refRange: "[13.5-18]" },
         { date: "2025-04-07", value: 12.5, unit: "g/dL", refRange: "[13.5-18]" },
@@ -22,8 +20,6 @@ export const BLOOD_TEST_DATA: BloodTestData = {
     "Hematocrito": [
         { date: "2025-02-12", value: 43.3, unit: "%", refRange: "[42-52]" },
         { date: "2025-03-05", value: 42, unit: "%", refRange: "[42-52]" },
-        { date: "2025-03-14", value: 41, unit: "%", refRange: null, note: "Gasometría Mañana" }, 
-        { date: "2025-03-14", value: 41, unit: "%", refRange: null, note: "Gasometría Tarde" },  
         { date: "2025-03-15", value: 39.7, unit: "%", refRange: "[42-52]" },
         { date: "2025-03-17", value: 38.8, unit: "%", refRange: "[42-52]" },
         { date: "2025-04-07", value: 36.4, unit: "%", refRange: "[42-52]" },
@@ -318,8 +314,6 @@ export const BLOOD_TEST_DATA: BloodTestData = {
     "Sodio": [
         { date: "2025-02-12", value: 141, unit: "mEq/L", refRange: "[136-146]" },
         { date: "2025-03-05", value: 141, unit: "mEq/L", refRange: "[136-146]" },
-        { date: "2025-03-14", value: 133, unit: "mmol/L", refRange: "[136-146]", note: "Gasometría Mañana" },
-        { date: "2025-03-14", value: 135, unit: "mmol/L", refRange: "[136-146]", note: "Gasometría Tarde" },
         { date: "2025-03-15", value: 137, unit: "mEq/L", refRange: "[136-146]" },
         { date: "2025-03-17", value: 139, unit: "mEq/L", refRange: "[136-146]" },
         { date: "2025-04-07", value: 141, unit: "mEq/L", refRange: "[136-146]" },
@@ -336,8 +330,6 @@ export const BLOOD_TEST_DATA: BloodTestData = {
     "Potasio": [
         { date: "2025-02-12", value: 4.7, unit: "mEq/L", refRange: "[3.5-5.1]" },
         { date: "2025-03-05", value: 4.9, unit: "mEq/L", refRange: "[3.5-5.1]" },
-        { date: "2025-03-14", value: 4.9, unit: "mmol/L", refRange: "[3.4-4.5]", note: "Gasometría Mañana" },
-        { date: "2025-03-14", value: 4.2, unit: "mmol/L", refRange: "[3.4-4.5]", note: "Gasometría Tarde" },
         { date: "2025-03-15", value: 3.8, unit: "mEq/L", refRange: "[3.4-4.5]" },
         { date: "2025-03-17", value: 4.3, unit: "mEq/L", refRange: "[3.5-5.1]" },
         { date: "2025-04-07", value: 4.9, unit: "mEq/L", refRange: "[3.5-5.1]" },
@@ -353,8 +345,6 @@ export const BLOOD_TEST_DATA: BloodTestData = {
     ],
     "Cloro": [
         { date: "2025-03-05", value: 106, unit: "mEq/L", refRange: "[98-107]" },
-        { date: "2025-03-14", value: 105, unit: "mmol/L", refRange: "[98-107]", note: "Gasometría Mañana" },
-        { date: "2025-03-14", value: 107, unit: "mmol/L", refRange: "[98-107]", note: "Gasometría Tarde" },
         { date: "2025-03-15", value: 105, unit: "mEq/L", refRange: "[98-107]" },
         { date: "2025-03-17", value: 101, unit: "mEq/L", refRange: "[98-107]" },
         { date: "2025-04-07", value: 108, unit: "mEq/L", refRange: "[98-107]" },
@@ -370,8 +360,6 @@ export const BLOOD_TEST_DATA: BloodTestData = {
     ],
     "Calcio": [
         { date: "2025-03-05", value: 9.4, unit: "mg/dL", refRange: "[8.8-10.6]" },
-        { date: "2025-03-14", value: 1.1, unit: "mmol/L", refRange: "[1.15-1.32]", note: "Iónico Gasometría Mañana" },
-        { date: "2025-03-14", value: 1.1, unit: "mmol/L", refRange: "[1.15-1.32]", note: "Iónico Gasometría Tarde" },
         { date: "2025-03-17", value: 9.6, unit: "mg/dL", refRange: "[8.8-10.6]" },
         { date: "2025-04-07", value: 9, unit: "mg/dL", refRange: "[8.8-10.6]" },
         { date: "2025-04-29", value: 9.2, unit: "mg/dL", refRange: "[8.8-10.6]", note: "Corregido" },
@@ -596,32 +584,6 @@ export const BLOOD_TEST_DATA: BloodTestData = {
         { date: "2025-04-29", value: 569, unit: "mg/dl", refRange: "[282-553]", note: "Madrugada" },
         { date: "2025-05-12", value: 283, unit: "mg/dl", refRange: "[150-500]" }
     ],
-    "pH (Gasometria Arterial)": [
-        { date: "2025-03-14", value: 7.32, unit: "", refRange: "[7.35-7.45]", note: "Mañana" },
-        { date: "2025-03-14", value: 7.39, unit: "", refRange: "[7.35-7.45]", note: "Tarde" },
-    ],
-    "pH (Gasometria Venosa)": [
-         { date: "2025-04-29", value: 7.40, unit: "", refRange: "[7.35-7.45]", note: "Madrugada" }
-    ],
-     "pCO2 (Gasometria Arterial)": [
-        { date: "2025-03-14", value: 41, unit: "mmHg", refRange: "[35-48]", note: "Mañana" },
-        { date: "2025-03-14", value: 34, unit: "mmHg", refRange: "[35-48]", note: "Tarde" },
-    ],
-    "pCO2 (Gasometria Venosa)": [
-         { date: "2025-04-29", value: 38, unit: "mmHg", refRange: "[38-48]", note: "Madrugada" }
-    ],
-    "pO2 (Gasometria Arterial)": [
-        { date: "2025-03-14", value: 208, unit: "mmHg", refRange: "[83-108]", note: "Mañana" },
-        { date: "2025-03-14", value: 93, unit: "mmHg", refRange: "[83-108]", note: "Tarde" },
-    ],
-     "pO2 (Gasometria Venosa)": [
-         { date: "2025-04-29", value: 45, unit: "mmHg", refRange: "[30-50]", note: "Madrugada" }
-    ],
-    "HCO3 (Bicarbonato Gasometria)": [
-        { date: "2025-03-14", value: 21.1, unit: "mmol/L", refRange: "[24-28]", note: "HCO3a Mañana" },
-        { date: "2025-03-14", value: 20.6, unit: "mmol/L", refRange: "[24-28]", note: "HCO3a Tarde" },
-        { date: "2025-04-29", value: 23.5, unit: "mmol/L", refRange: "[24-28]", note: "HCO3a Madrugada (Venosa)" }
-    ],
     "Colesterol": [
         { date: "2025-07-02", value: 261, unit: "mg/dL", refRange: "[140-200]" }
     ],
@@ -681,13 +643,6 @@ export const GENERAL_REF_RANGES: Record<string, string> = {
     "INR": "Ref: ~0.8-1.2 (No anticoagulado)",
     "TTPA": "Ref: ~25-35 segundos",
     "Fibrinogeno Derivado": "Ref: ~200-400 mg/dL",
-    "pH (Gasometria Arterial)": "Ref: 7.35-7.45",
-    "pH (Gasometria Venosa)": "Ref: ~7.31-7.41",
-    "pCO2 (Gasometria Arterial)": "Ref: 35-45 mmHg",
-    "pCO2 (Gasometria Venosa)": "Ref: ~40-50 mmHg",
-    "pO2 (Gasometria Arterial)": "Ref: 80-100 mmHg",
-    "pO2 (Gasometria Venosa)": "Ref: ~30-50 mmHg",
-    "HCO3 (Bicarbonato Gasometria)": "Ref: ~22-28 mmol/L",
     "Colesterol": "Ref: Deseable <200 mg/dL",
     "Trigliceridos": "Ref: Deseable <150 mg/dL",
     "Creatinkinasa (CK)": "Ref: ~40-320 U/L (Varía)"
@@ -741,13 +696,6 @@ export const PREDEFINED_DESCRIPTIONS: Record<string, string> = {
     "INR": "Ratio Normalizado Internacional, estandariza el TP. Usado para monitorizar terapia con antagonistas de Vitamina K.",
     "TTPA": "Tiempo de Tromboplastina Parcial Activada. Mide la vía intrínseca de la coagulación. Usado para monitorizar heparina.",
     "Fibrinogeno Derivado": "Proteína esencial para la formación de coágulos. Niveles bajos aumentan riesgo de sangrado; altos pueden ser reactantes de fase aguda.",
-    "pH (Gasometria Arterial)": "Medida de acidez/alcalinidad de la sangre arterial. Crucial para evaluar equilibrio ácido-base.",
-    "pH (Gasometria Venosa)": "Medida de acidez/alcalinidad de la sangre venosa. Similar al arterial pero ligeramente más ácido.",
-    "pCO2 (Gasometria Arterial)": "Presión parcial de dióxido de carbono en sangre arterial. Refleja componente respiratorio del equilibrio ácido-base.",
-    "pCO2 (Gasometria Venosa)": "Presión parcial de dióxido de carbono en sangre venosa. Refleja componente respiratorio.",
-    "pO2 (Gasometria Arterial)": "Presión parcial de oxígeno en sangre arterial. Mide la oxigenación sanguínea.",
-    "pO2 (Gasometria Venosa)": "Refleja la extracción de oxígeno por los tejidos.",
-    "HCO3 (Bicarbonato Gasometria)": "Bicarbonato en sangre, principal buffer. Refleja componente metabólico del equilibrio ácido-base.",
     "Colesterol": "El colesterol es una sustancia grasa necesaria para las células, pero su exceso en sangre (hipercolesterolemia) es un factor de riesgo cardiovascular importante, ya que puede depositarse en las arterias.",
     "Trigliceridos": "Son otro tipo de grasa en la sangre. Niveles elevados, a menudo junto con colesterol alto, aumentan el riesgo de enfermedades del corazón y pueden estar relacionados con la dieta, el sobrepeso o la diabetes.",
     "Creatinkinasa (CK)": "La CK es una enzima que se encuentra en el corazón, el cerebro y, sobre todo, en los músculos. Niveles elevados en sangre suelen indicar daño o estrés muscular, como el que puede ocurrir por ejercicio intenso, lesiones o ciertas enfermedades musculares."
