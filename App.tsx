@@ -3,9 +3,10 @@ import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import ParameterSelector from './components/ParameterSelector';
 import EvolutionChart from './components/EvolutionChart';
 import DescriptionBox from './components/DescriptionBox';
-import { BLOOD_TEST_DATA, GENERAL_REF_RANGES, PREDEFINED_DESCRIPTIONS } from './constants';
+import { GENERAL_REF_RANGES, PREDEFINED_DESCRIPTIONS } from './constants';
 import { fetchParameterDescriptionFromAPI } from './services/geminiService';
-import { BloodTestDataPoint } from './types';
+import { BloodTestData, BloodTestDataPoint } from './types';
+import AddDataForm from './components/AddDataForm';
 import { parseDateValue, parseRefRangeString } from './utils/chartUtils';
 
 interface ParameterStatus {
@@ -14,6 +15,8 @@ interface ParameterStatus {
 }
 
 const App: React.FC = () => {
+  const [bloodTestData, setBloodTestData] = useState<BloodTestData>({});
+  const [isLoadingData, setIsLoadingData] = useState<boolean>(true);
   const [availableParameters, setAvailableParameters] = useState<string[]>([]);
   const [selectedParameter, setSelectedParameter] = useState<string | null>(null);
   const [showDescription, setShowDescription] = useState<boolean>(false);
@@ -23,16 +26,32 @@ const App: React.FC = () => {
   const [parameterFlags, setParameterFlags] = useState<Record<string, ParameterStatus>>({});
 
   useEffect(() => {
-    const paramNames = Object.keys(BLOOD_TEST_DATA)
-      .filter(param => BLOOD_TEST_DATA[param] && BLOOD_TEST_DATA[param].length > 0)
+    const fetchData = async () => {
+      try {
+        const response = await fetch('/blood_data.json');
+        const data: BloodTestData = await response.json();
+        setBloodTestData(data);
+      } catch (error) {
+        console.error('Error al cargar los datos de análisis:', error);
+      } finally {
+        setIsLoadingData(false);
+      }
+    };
+    fetchData();
+  }, []);
+
+  useEffect(() => {
+    if (Object.keys(bloodTestData).length === 0) return;
+    const paramNames = Object.keys(bloodTestData)
+      .filter(param => bloodTestData[param] && bloodTestData[param].length > 0)
       .sort();
     setAvailableParameters(paramNames);
 
     const flags: Record<string, ParameterStatus> = {};
     paramNames.forEach(paramName => {
-      const paramData = BLOOD_TEST_DATA[paramName];
+      const paramData = bloodTestData[paramName];
       const sortedData = [...paramData].sort((a, b) => parseDateValue(b.date).getTime() - parseDateValue(a.date).getTime());
-      
+
       if (sortedData.length > 0) {
         const latestDataPoint = sortedData[0];
         let isOutOfRange = false;
@@ -55,11 +74,10 @@ const App: React.FC = () => {
     });
     setParameterFlags(flags);
 
-    if (paramNames.length > 0 && selectedParameter === null) { 
+    if (paramNames.length > 0 && selectedParameter === null) {
       setSelectedParameter(paramNames[0]);
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []); // Only run once on mount as BLOOD_TEST_DATA is constant and we only want to init selectedParameter once.
+  }, [bloodTestData, selectedParameter]);
 
   const fetchAndSetDescription = useCallback(async (paramName: string) => {
     if (descriptionCache[paramName]) {
@@ -96,12 +114,30 @@ const App: React.FC = () => {
   };
 
   const currentParameterData: BloodTestDataPoint[] = useMemo(() => {
-    if (selectedParameter && BLOOD_TEST_DATA[selectedParameter]) {
-      return BLOOD_TEST_DATA[selectedParameter];
+    if (selectedParameter && bloodTestData[selectedParameter]) {
+      return bloodTestData[selectedParameter];
     }
     return [];
-  }, [selectedParameter]);
+  }, [selectedParameter, bloodTestData]);
 
+  if (isLoadingData) {
+    return (
+      <div className="min-h-screen flex items-center justify-center text-slate-200">
+        Cargando datos...
+      </div>
+    );
+  }
+
+  const handleAddData = ({ parameter, newDataPoint }: { parameter: string; newDataPoint: BloodTestDataPoint }) => {
+    setBloodTestData(prevData => {
+      const updated = { ...prevData };
+      if (!updated[parameter]) {
+        updated[parameter] = [];
+      }
+      updated[parameter].push(newDataPoint);
+      return updated;
+    });
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 to-slate-700 py-8 px-4 sm:px-6 lg:px-8 flex items-center justify-center">
@@ -138,6 +174,7 @@ const App: React.FC = () => {
               <label htmlFor="descriptionToggle" className="text-sm font-medium text-slate-200">Mostrar Descripción del Parámetro</label>
             </div>
           </div>
+          <AddDataForm onAddData={handleAddData} parameters={availableParameters} />
         </div>
         
         <div className="mb-8 bg-slate-700 p-4 sm:p-6 rounded-lg shadow-lg">
