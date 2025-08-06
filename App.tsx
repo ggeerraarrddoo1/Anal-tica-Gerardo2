@@ -15,9 +15,8 @@ interface ParameterStatus {
 
 const App: React.FC = () => {
   const [availableParameters, setAvailableParameters] = useState<string[]>([]);
-  const [selectedParameter, setSelectedParameter] = useState<string | null>(null);
+  const [selectedParameters, setSelectedParameters] = useState<string[]>([]);
   const [showDescription, setShowDescription] = useState<boolean>(false);
-  const [parameterDescription, setParameterDescription] = useState<string>('');
   const [isDescriptionLoading, setIsDescriptionLoading] = useState<boolean>(false);
   const [descriptionCache, setDescriptionCache] = useState<Record<string, string>>({ ...PREDEFINED_DESCRIPTIONS });
   const [parameterFlags, setParameterFlags] = useState<Record<string, ParameterStatus>>({});
@@ -55,52 +54,56 @@ const App: React.FC = () => {
     });
     setParameterFlags(flags);
 
-    if (paramNames.length > 0 && selectedParameter === null) { 
-      setSelectedParameter(paramNames[0]);
+    if (paramNames.length > 0 && selectedParameters.length === 0) {
+      setSelectedParameters([paramNames[0]]);
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []); // Only run once on mount as BLOOD_TEST_DATA is constant and we only want to init selectedParameter once.
+  }, []); // Only run once on mount as BLOOD_TEST_DATA is constant and we only want to init selectedParameters once.
 
   const fetchAndSetDescription = useCallback(async (paramName: string) => {
     if (descriptionCache[paramName]) {
-      setParameterDescription(descriptionCache[paramName]);
       return;
     }
-    setIsDescriptionLoading(true);
     try {
       const desc = await fetchParameterDescriptionFromAPI(paramName);
       setDescriptionCache(prevCache => ({ ...prevCache, [paramName]: desc }));
-      setParameterDescription(desc);
     } catch (error) {
       console.error("Failed to fetch description:", error);
-      setParameterDescription("Error al cargar la descripción.");
-    } finally {
-      setIsDescriptionLoading(false);
+      setDescriptionCache(prevCache => ({ ...prevCache, [paramName]: "Error al cargar la descripción." }));
     }
   }, [descriptionCache]);
 
   useEffect(() => {
-    if (selectedParameter && showDescription) {
-      fetchAndSetDescription(selectedParameter);
-    } else if (!showDescription) {
-        setParameterDescription(''); 
+    if (showDescription && selectedParameters.length > 0) {
+      const missing = selectedParameters.filter(p => !descriptionCache[p]);
+      if (missing.length > 0) {
+        setIsDescriptionLoading(true);
+        Promise.all(missing.map(p => fetchAndSetDescription(p))).finally(() => setIsDescriptionLoading(false));
+      } else {
+        setIsDescriptionLoading(false);
+      }
+    } else {
+      setIsDescriptionLoading(false);
     }
-  }, [selectedParameter, showDescription, fetchAndSetDescription]);
+  }, [selectedParameters, showDescription, fetchAndSetDescription, descriptionCache]);
 
-  const handleParameterChange = (parameter: string) => {
-    setSelectedParameter(parameter);
+  const handleParameterChange = (parameters: string[]) => {
+    setSelectedParameters(parameters);
   };
 
   const handleToggleDescription = () => {
     setShowDescription(prev => !prev);
   };
 
-  const currentParameterData: BloodTestDataPoint[] = useMemo(() => {
-    if (selectedParameter && BLOOD_TEST_DATA[selectedParameter]) {
-      return BLOOD_TEST_DATA[selectedParameter];
-    }
-    return [];
-  }, [selectedParameter]);
+  const currentParameterData: Record<string, BloodTestDataPoint[]> = useMemo(() => {
+    const dataSets: Record<string, BloodTestDataPoint[]> = {};
+    selectedParameters.forEach(param => {
+      if (BLOOD_TEST_DATA[param]) {
+        dataSets[param] = BLOOD_TEST_DATA[param];
+      }
+    });
+    return dataSets;
+  }, [selectedParameters]);
 
 
   return (
@@ -117,10 +120,10 @@ const App: React.FC = () => {
           <div className="flex flex-col sm:flex-row sm:items-end sm:space-x-6">
             <div className="flex-grow mb-4 sm:mb-0">
               <label htmlFor="parameterSelector" className="block text-sm font-medium text-indigo-300 mb-1">Seleccionar Parámetro:</label>
-              {availableParameters.length > 0 && selectedParameter && (
+              {availableParameters.length > 0 && (
                 <ParameterSelector
                   parameters={availableParameters}
-                  selectedParameter={selectedParameter}
+                  selectedParameters={selectedParameters}
                   onChange={handleParameterChange}
                   parameterFlags={parameterFlags}
                 />
@@ -141,36 +144,39 @@ const App: React.FC = () => {
         </div>
         
         <div className="mb-8 bg-slate-700 p-4 sm:p-6 rounded-lg shadow-lg">
-          {selectedParameter && currentParameterData.length > 0 ? (
+          {selectedParameters.length > 0 && Object.keys(currentParameterData).length > 0 ? (
             <EvolutionChart
-              parameterName={selectedParameter}
-              data={currentParameterData}
+              dataSets={currentParameterData}
               generalRefRanges={GENERAL_REF_RANGES}
             />
-          ) : selectedParameter && currentParameterData.length === 0 ? (
-             <div id="noDataMessage" className="text-center text-slate-400 py-12">
-                <svg className="mx-auto h-12 w-12 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                    <path vectorEffect="non-scaling-stroke" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-                <p className="mt-2 text-lg font-medium">No hay datos disponibles para {selectedParameter} o los datos son insuficientes.</p>
+          ) : selectedParameters.length > 0 ? (
+            <div id="noDataMessage" className="text-center text-slate-400 py-12">
+              <svg className="mx-auto h-12 w-12 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path vectorEffect="non-scaling-stroke" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <p className="mt-2 text-lg font-medium">No hay datos disponibles para los parámetros seleccionados o los datos son insuficientes.</p>
             </div>
           ) : (
             <div className="text-center text-slate-400 py-12">
               <svg className="mx-auto h-12 w-12 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                 <path vectorEffect="non-scaling-stroke" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
               </svg>
-              <p className="mt-2 text-lg font-medium">Por favor, selecciona un parámetro para visualizar su evolución.</p>
+              <p className="mt-2 text-lg font-medium">Por favor, selecciona uno o más parámetros para visualizar su evolución.</p>
             </div>
           )}
         </div>
 
-        {showDescription && selectedParameter && (
-          <div className="bg-slate-700 p-6 rounded-lg shadow-lg">
-            <h2 className="text-xl font-semibold text-indigo-300 mb-3">Descripción de {selectedParameter}</h2>
-            <DescriptionBox
-              description={parameterDescription}
-              isLoading={isDescriptionLoading}
-            />
+        {showDescription && selectedParameters.length > 0 && (
+          <div className="space-y-6">
+            {selectedParameters.map(param => (
+              <div key={param} className="bg-slate-700 p-6 rounded-lg shadow-lg">
+                <h2 className="text-xl font-semibold text-indigo-300 mb-3">Descripción de {param}</h2>
+                <DescriptionBox
+                  description={descriptionCache[param] || ''}
+                  isLoading={isDescriptionLoading && !descriptionCache[param]}
+                />
+              </div>
+            ))}
           </div>
         )}
       </div>

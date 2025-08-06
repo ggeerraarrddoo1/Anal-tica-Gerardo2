@@ -8,17 +8,21 @@ interface ParameterFlag {
 
 interface ParameterSelectorProps {
   parameters: string[];
-  selectedParameter: string | null;
-  onChange: (parameter: string) => void;
+  selectedParameters: string[];
+  onChange: (parameters: string[]) => void;
   parameterFlags: Record<string, ParameterFlag>;
 }
 
-const ParameterSelector: React.FC<ParameterSelectorProps> = ({ parameters, selectedParameter, onChange, parameterFlags }) => {
+const ParameterSelector: React.FC<ParameterSelectorProps> = ({ parameters, selectedParameters, onChange, parameterFlags }) => {
   return (
     <select
       id="parameterSelector"
-      value={selectedParameter || ''}
-      onChange={(e) => onChange(e.target.value)}
+      multiple
+      value={selectedParameters}
+      onChange={(e) => {
+        const opts = Array.from(e.target.selectedOptions).map(opt => opt.value);
+        onChange(opts);
+      }}
       className="w-full p-3 border border-slate-500 rounded-lg shadow-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition duration-150 ease-in-out bg-slate-600 text-slate-100 placeholder-slate-400"
       aria-label="Seleccionar parámetro de análisis"
     >
