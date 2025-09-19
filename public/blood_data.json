@@ -90,6 +90,12 @@
       "value": 13.9,
       "unit": "g/dL",
       "refRange": "[13.0-17.5]"
+    },
+    {
+      "date": "2025-08-26",
+      "value": 14.9,
+      "unit": "g/dL",
+      "refRange": "[13.0-17.0]"
     }
   ],
   "Hematies": [
@@ -98,6 +104,12 @@
       "value": 4.51,
       "unit": "10^12/L",
       "refRange": "[4.40-5.90]"
+    },
+    {
+      "date": "2025-08-26",
+      "value": 4.88,
+      "unit": "10^12/L",
+      "refRange": "[4.60-6.00]"
     }
   ],
   "Hematocrito": [
@@ -185,6 +197,12 @@
       "value": 39,
       "unit": "%",
       "refRange": null
+    },
+    {
+      "date": "2025-08-26",
+      "value": 43.0,
+      "unit": "%",
+      "refRange": "[40.0-50.0]"
     }
   ],
   "VCM": [
@@ -270,6 +288,12 @@
     {
       "date": "2025-07-02",
       "value": 89.8,
+      "unit": "fL",
+      "refRange": "[80.0-100.0]"
+    },
+    {
+      "date": "2025-08-26",
+      "value": 88.1,
       "unit": "fL",
       "refRange": "[80.0-100.0]"
     }
@@ -359,6 +383,12 @@
       "value": 30.5,
       "unit": "pg",
       "refRange": "[26.6-33.8]"
+    },
+    {
+      "date": "2025-08-26",
+      "value": 30.5,
+      "unit": "pg",
+      "refRange": "[27.0-32.0]"
     }
   ],
   "CHCM": [
@@ -446,6 +476,12 @@
       "value": 34,
       "unit": "g/dL",
       "refRange": "[31.5-36.3]"
+    },
+    {
+      "date": "2025-08-26",
+      "value": 34.7,
+      "unit": "g/dL",
+      "refRange": "[32.0-36.0]"
     }
   ],
   "ADE/RDW": [
@@ -539,6 +575,12 @@
       "value": 16.8,
       "unit": "%",
       "refRange": "[12.00-15.00]"
+    },
+    {
+      "date": "2025-08-26",
+      "value": 13.0,
+      "unit": "%",
+      "refRange": "[11.5-14.5]"
     }
   ],
   "Leucocitos": [
@@ -632,6 +674,12 @@
       "value": 7.62,
       "unit": "10^9/L",
       "refRange": "[3.80-11.00]"
+    },
+    {
+      "date": "2025-08-26",
+      "value": 7.78,
+      "unit": "10^9/L",
+      "refRange": "[4.0-11.0]"
     }
   ],
   "Neutrofilos (%)": [
@@ -725,6 +773,12 @@
       "value": 40.4,
       "unit": "%",
       "refRange": "[40.0-77.0]"
+    },
+    {
+      "date": "2025-08-26",
+      "value": 55.0,
+      "unit": "%",
+      "refRange": "[40.0-70.0]"
     }
   ],
   "Linfocitos (%)": [
@@ -818,6 +872,12 @@
       "value": 42.8,
       "unit": "%",
       "refRange": "[16.0-44.0]"
+    },
+    {
+      "date": "2025-08-26",
+      "value": 33.0,
+      "unit": "%",
+      "refRange": "[20.0-45.0]"
     }
   ],
   "Monocitos (%)": [
@@ -911,6 +971,12 @@
       "value": 11.6,
       "unit": "%",
       "refRange": "[4.0-10.0]"
+    },
+    {
+      "date": "2025-08-26",
+      "value": 6.0,
+      "unit": "%",
+      "refRange": "[2.0-10.0]"
     }
   ],
   "Eosinofilos (%)": [
@@ -998,6 +1064,12 @@
       "value": 4,
       "unit": "%",
       "refRange": "[1.0-7.0]"
+    },
+    {
+      "date": "2025-08-26",
+      "value": 4.0,
+      "unit": "%",
+      "refRange": "[0.0-6.0]"
     }
   ],
   "Basofilos (%)": [
@@ -1085,6 +1157,12 @@
       "value": 1.9,
       "unit": "%",
       "refRange": "[0.0-1.0]"
+    },
+    {
+      "date": "2025-08-26",
+      "value": 1.0,
+      "unit": "%",
+      "refRange": "[0.0-2.0]"
     }
   ],
   "Neutrofilos (Absoluto)": [
@@ -1172,6 +1250,12 @@
       "value": 5.9,
       "unit": "10^9/L",
       "refRange": "[1.80-11.00]"
+    },
+    {
+      "date": "2025-08-26",
+      "value": 4.28,
+      "unit": "10^9/L",
+      "refRange": "[1.80-7.30]"
     }
   ],
   "Linfocitos (Absoluto)": [
@@ -1257,6 +1341,12 @@
     {
       "date": "2025-07-02",
       "value": 3.74,
+      "unit": "10^9/L",
+      "refRange": "[1.00-4.80]"
+    },
+    {
+      "date": "2025-08-26",
+      "value": 2.57,
       "unit": "10^9/L",
       "refRange": "[1.00-4.80]"
     }
@@ -1346,6 +1436,12 @@
       "value": 1.06,
       "unit": "10^9/L",
       "refRange": "[0.00-1.00]"
+    },
+    {
+      "date": "2025-08-26",
+      "value": 0.47,
+      "unit": "10^9/L",
+      "refRange": "[0.10-1.00]"
     }
   ],
   "Eosinofilos (Absoluto)": [
@@ -1354,12 +1450,24 @@
       "value": 0.45,
       "unit": "10^9/L",
       "refRange": "[0.00-0.45]"
+    },
+    {
+      "date": "2025-08-26",
+      "value": 0.31,
+      "unit": "10^9/L",
+      "refRange": "[0.00-0.60]"
     }
   ],
   "Basofilos (Absoluto)": [
     {
       "date": "2025-07-02",
       "value": 0.21,
+      "unit": "10^9/L",
+      "refRange": "[0.00-0.20]"
+    },
+    {
+      "date": "2025-08-26",
+      "value": 0.15,
       "unit": "10^9/L",
       "refRange": "[0.00-0.20]"
     }
@@ -1455,6 +1563,12 @@
       "value": 308,
       "unit": "10^9/L",
       "refRange": "[130.0-450.0]"
+    },
+    {
+      "date": "2025-08-26",
+      "value": 217,
+      "unit": "10^9/L",
+      "refRange": "[150-450]"
     }
   ],
   "Glucosa": [
@@ -1546,6 +1660,12 @@
     {
       "date": "2025-08-01",
       "value": 89,
+      "unit": "mg/dL",
+      "refRange": "[70-110]"
+    },
+    {
+      "date": "2025-08-26",
+      "value": 102,
       "unit": "mg/dL",
       "refRange": "[70-110]"
     }
@@ -1641,6 +1761,12 @@
       "value": 42,
       "unit": "mg/dL",
       "refRange": "[10-45]"
+    },
+    {
+      "date": "2025-08-26",
+      "value": 45,
+      "unit": "mg/dL",
+      "refRange": "[20-50]"
     }
   ],
   "Creatinina": [
@@ -1734,12 +1860,24 @@
       "value": 1.13,
       "unit": "mg/dL",
       "refRange": "[0.70-1.30]"
+    },
+    {
+      "date": "2025-08-26",
+      "value": 1.17,
+      "unit": "mg/dL",
+      "refRange": "[0.70-1.20]"
     }
   ],
   "Filtrado Glomerular": [
     {
       "date": "2025-08-01",
       "value": 77.87,
+      "unit": "mL/min",
+      "refRange": "> 60"
+    },
+    {
+      "date": "2025-08-26",
+      "value": 75,
       "unit": "mL/min",
       "refRange": "> 60"
     }
@@ -1832,6 +1970,12 @@
     },
     {
       "date": "2025-08-01",
+      "value": 142,
+      "unit": "mmol/L",
+      "refRange": "[132-146]"
+    },
+    {
+      "date": "2025-08-26",
       "value": 142,
       "unit": "mmol/L",
       "refRange": "[132-146]"
@@ -1928,6 +2072,12 @@
       "value": 4.8,
       "unit": "mmol/L",
       "refRange": "[3.5-5.5]"
+    },
+    {
+      "date": "2025-08-26",
+      "value": 4.8,
+      "unit": "mmol/L",
+      "refRange": "[3.5-5.1]"
     }
   ],
   "Cloro": [
@@ -2009,6 +2159,12 @@
       "value": 105,
       "unit": "mmol/L",
       "refRange": "[95-110]"
+    },
+    {
+      "date": "2025-08-26",
+      "value": 103,
+      "unit": "mmol/L",
+      "refRange": "[98-107]"
     }
   ],
   "Calcio": [
@@ -2092,6 +2248,12 @@
       "value": 9.7,
       "unit": "mg/dL",
       "refRange": "[8.8-10.5]"
+    },
+    {
+      "date": "2025-08-26",
+      "value": 9.5,
+      "unit": "mg/dL",
+      "refRange": "[8.4-10.5]"
     }
   ],
   "Fosforo": [
@@ -2142,6 +2304,12 @@
       "value": 6.1,
       "unit": "mg/dL",
       "refRange": "[2.4-5.1]"
+    },
+    {
+      "date": "2025-08-26",
+      "value": 2.2,
+      "unit": "mg/dL",
+      "refRange": "[2.5-4.5]"
     }
   ],
   "Magnesio": [
@@ -2279,6 +2447,12 @@
       "value": 0.3,
       "unit": "mg/dL",
       "refRange": "[0.0-1.1]"
+    },
+    {
+      "date": "2025-08-26",
+      "value": 0.6,
+      "unit": "mg/dL",
+      "refRange": "[0.2-1.2]"
     }
   ],
   "GOT/AST": [
@@ -2359,6 +2533,12 @@
       "value": 22,
       "unit": "U/L",
       "refRange": "[0-37]"
+    },
+    {
+      "date": "2025-08-26",
+      "value": 22,
+      "unit": "U/L",
+      "refRange": "[0-40]"
     }
   ],
   "GPT/ALT": [
@@ -2446,6 +2626,12 @@
       "value": 31,
       "unit": "U/L",
       "refRange": "[0-49]"
+    },
+    {
+      "date": "2025-08-26",
+      "value": 27,
+      "unit": "U/L",
+      "refRange": "[0-41]"
     }
   ],
   "GGT": [
@@ -2526,6 +2712,12 @@
       "value": 114,
       "unit": "U/L",
       "refRange": "[5-85]"
+    },
+    {
+      "date": "2025-08-26",
+      "value": 61,
+      "unit": "U/L",
+      "refRange": "[8-61]"
     }
   ],
   "Fosfatasa Alcalina": [
@@ -2606,6 +2798,12 @@
       "value": 65,
       "unit": "U/L",
       "refRange": "[40-136]"
+    },
+    {
+      "date": "2025-08-26",
+      "value": 74,
+      "unit": "U/L",
+      "refRange": "[40-129]"
     }
   ],
   "LDH": [
@@ -2686,6 +2884,12 @@
       "value": 222,
       "unit": "U/L",
       "refRange": "[120-241]"
+    },
+    {
+      "date": "2025-08-26",
+      "value": 223,
+      "unit": "U/L",
+      "refRange": "[135-225]"
     }
   ],
   "Proteinas Totales": [
@@ -2766,6 +2970,12 @@
       "value": 6.5,
       "unit": "g/dL",
       "refRange": "[6.4-8.2]"
+    },
+    {
+      "date": "2025-08-26",
+      "value": 7.5,
+      "unit": "g/dL",
+      "refRange": "[6.6-8.7]"
     }
   ],
   "Albumina": [
@@ -2853,6 +3063,12 @@
       "value": 4.3,
       "unit": "g/dL",
       "refRange": "[3.4-5.0]"
+    },
+    {
+      "date": "2025-08-26",
+      "value": 4.5,
+      "unit": "g/dL",
+      "refRange": "[3.5-5.2]"
     }
   ],
   "Acido Urico": [
@@ -2971,6 +3187,12 @@
       "value": 89,
       "unit": "µg/dL",
       "refRange": "[35-150]"
+    },
+    {
+      "date": "2025-08-26",
+      "value": 119,
+      "unit": "µg/dL",
+      "refRange": "[59-158]"
     }
   ],
   "Proteina C Reactiva": [
@@ -3221,12 +3443,24 @@
       "value": 261,
       "unit": "mg/dL",
       "refRange": "[140-200]"
+    },
+    {
+      "date": "2025-08-26",
+      "value": 257,
+      "unit": "mg/dL",
+      "refRange": "[140-200]"
     }
   ],
   "HDL-Colesterol": [
     {
       "date": "2025-08-01",
       "value": 63,
+      "unit": "mg/dL",
+      "refRange": "[35-60]"
+    },
+    {
+      "date": "2025-08-26",
+      "value": 51,
       "unit": "mg/dL",
       "refRange": "[35-60]"
     }
@@ -3237,12 +3471,24 @@
       "value": 154.9,
       "unit": "mg/dL",
       "refRange": "<155.00"
+    },
+    {
+      "date": "2025-08-26",
+      "value": 190,
+      "unit": "mg/dL",
+      "refRange": "<155.00"
     }
   ],
   "VLDL-Colesterol": [
     {
       "date": "2025-08-01",
       "value": 43.4,
+      "unit": "mg/dL",
+      "refRange": "[10.00-32.00]"
+    },
+    {
+      "date": "2025-08-26",
+      "value": 16,
       "unit": "mg/dL",
       "refRange": "[10.00-32.00]"
     }
@@ -3257,6 +3503,12 @@
     {
       "date": "2025-08-01",
       "value": 217,
+      "unit": "mg/dL",
+      "refRange": "[50-160]"
+    },
+    {
+      "date": "2025-08-26",
+      "value": 82,
       "unit": "mg/dL",
       "refRange": "[50-160]"
     }
@@ -3275,6 +3527,12 @@
       "value": 13.4,
       "unit": "%",
       "refRange": "[15.00-65.00]"
+    },
+    {
+      "date": "2025-08-26",
+      "value": 32.0,
+      "unit": "%",
+      "refRange": "[15.0-65.0]"
     }
   ],
   "Cociente N/L": [
@@ -3283,6 +3541,12 @@
       "value": 0.94,
       "unit": "",
       "refRange": null
+    },
+    {
+      "date": "2025-08-26",
+      "value": 1.7,
+      "unit": "",
+      "refRange": "[0.8-3.5]"
     }
   ]
 }
