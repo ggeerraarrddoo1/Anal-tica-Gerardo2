@@ -1,7 +1,9 @@
 
 import { GoogleGenAI, GenerateContentResponse } from "@google/genai";
 
-const API_KEY = process.env.API_KEY;
+// Prefer the explicitly named GEMINI_API_KEY but fall back to API_KEY for
+// backward compatibility with older environment setups.
+const API_KEY = process.env.GEMINI_API_KEY || process.env.API_KEY;
 
 if (!API_KEY) {
   console.warn("API_KEY for Gemini is not set. Description generation will be disabled.");
