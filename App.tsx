@@ -54,9 +54,22 @@ const App: React.FC = () => {
         if (!latest) {
           return current;
         }
+
         const latestDate = parseDateValue(latest.date).getTime();
         const currentDate = parseDateValue(current.date).getTime();
-        return currentDate > latestDate ? current : latest;
+
+        const latestDateIsNaN = Number.isNaN(latestDate);
+        const currentDateIsNaN = Number.isNaN(currentDate);
+
+        if (latestDateIsNaN && !currentDateIsNaN) {
+          return current;
+        }
+
+        if (currentDateIsNaN) {
+          return latest;
+        }
+
+        return currentDate >= latestDate ? current : latest;
       }, null);
 
       if (latestDataPoint) {
