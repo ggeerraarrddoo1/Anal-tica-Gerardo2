@@ -1,5 +1,5 @@
 
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useMemo, useRef } from 'react';
 import { Chart, registerables, ChartComponentLike } from 'chart.js'; // Removed Scriptable as it's not directly used for props here
 import 'chartjs-adapter-date-fns';
 import { es } from 'date-fns/locale'; 
@@ -15,6 +15,8 @@ interface EvolutionChartProps {
   data: BloodTestDataPoint[];
   generalRefRanges: Record<string, string>;
 }
+
+type ParsedDataPoint = BloodTestDataPoint & { parsedDate: Date };
 
 interface EventDataDetail {
     date: Date;
@@ -69,8 +71,21 @@ const EvolutionChart: React.FC<EvolutionChartProps> = ({ parameterName, data, ge
       }
   ];
 
+  const parsedPoints = useMemo<ParsedDataPoint[]>(() => {
+    if (!data || data.length === 0) {
+      return [];
+    }
+
+    return [...data]
+      .map(point => ({
+        ...point,
+        parsedDate: parseDateValue(point.date),
+      }))
+      .sort((a, b) => a.parsedDate.getTime() - b.parsedDate.getTime());
+  }, [data]);
+
   useEffect(() => {
-    if (!chartRef.current || !data || data.length === 0) {
+    if (!chartRef.current || parsedPoints.length === 0) {
         if (chartInstanceRef.current) {
             chartInstanceRef.current.destroy();
             chartInstanceRef.current = null;
@@ -78,13 +93,11 @@ const EvolutionChart: React.FC<EvolutionChartProps> = ({ parameterName, data, ge
       return;
     }
 
-    const sortedData = [...data].sort((a, b) => parseDateValue(a.date).getTime() - parseDateValue(b.date).getTime());
-    
-    const labels = sortedData.map(d => parseDateValue(d.date));
-    const values = sortedData.map(d => d.value);
-    const units = sortedData.length > 0 ? sortedData[0].unit : '';
-    
-    const firstDataPointRefRange: RefRange = sortedData.length > 0 ? parseRefRangeString(sortedData[0].refRange) : {min: null, max: null, text: 'N/A'};
+    const labels = parsedPoints.map(d => d.parsedDate);
+    const values = parsedPoints.map(d => d.value);
+    const units = parsedPoints.length > 0 ? parsedPoints[0].unit : '';
+
+    const firstDataPointRefRange: RefRange = parsedPoints.length > 0 ? parseRefRangeString(parsedPoints[0].refRange) : {min: null, max: null, text: 'N/A'};
     const generalRefText = generalRefRanges[parameterName] || `Ref: ${firstDataPointRefRange.text}`;
 
     const chartAnnotations: AnnotationOptions[] = [];
@@ -241,7 +254,7 @@ const EvolutionChart: React.FC<EvolutionChartProps> = ({ parameterName, data, ge
                 if (context.parsed.y !== null) {
                   label += `${context.parsed.y} ${units}`;
                 }
-                const dataPoint = sortedData[context.dataIndex];
+                const dataPoint = parsedPoints[context.dataIndex];
                 if (dataPoint && dataPoint.refRange) {
                   label += ` (Ref: ${dataPoint.refRange})`;
                 }
@@ -270,7 +283,7 @@ const EvolutionChart: React.FC<EvolutionChartProps> = ({ parameterName, data, ge
       }
     };
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [parameterName, data, generalRefRanges]); 
+  }, [parameterName, parsedPoints, generalRefRanges]);
 
   // Data for custom HTML legend
   const eventsForCustomLegend = eventDataForChart.filter(
