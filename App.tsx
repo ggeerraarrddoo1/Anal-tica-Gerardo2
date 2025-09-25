@@ -50,10 +50,16 @@ const App: React.FC = () => {
     const flags: Record<string, ParameterStatus> = {};
     paramNames.forEach(paramName => {
       const paramData = bloodTestData[paramName];
-      const sortedData = [...paramData].sort((a, b) => parseDateValue(b.date).getTime() - parseDateValue(a.date).getTime());
+      const latestDataPoint = paramData.reduce<BloodTestDataPoint | null>((latest, current) => {
+        if (!latest) {
+          return current;
+        }
+        const latestDate = parseDateValue(latest.date).getTime();
+        const currentDate = parseDateValue(current.date).getTime();
+        return currentDate > latestDate ? current : latest;
+      }, null);
 
-      if (sortedData.length > 0) {
-        const latestDataPoint = sortedData[0];
+      if (latestDataPoint) {
         let isOutOfRange = false;
         let currentTrend: 'low' | 'high' | 'normal' = 'normal';
 
@@ -73,11 +79,13 @@ const App: React.FC = () => {
       }
     });
     setParameterFlags(flags);
+  }, [bloodTestData]);
 
-    if (paramNames.length > 0 && selectedParameter === null) {
-      setSelectedParameter(paramNames[0]);
+  useEffect(() => {
+    if (availableParameters.length > 0) {
+      setSelectedParameter(prevSelected => prevSelected ?? availableParameters[0]);
     }
-  }, [bloodTestData, selectedParameter]);
+  }, [availableParameters]);
 
   const fetchAndSetDescription = useCallback(async (paramName: string) => {
     if (descriptionCache[paramName]) {
